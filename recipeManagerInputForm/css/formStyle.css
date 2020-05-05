@@ -1,0 +1,75 @@
+/*# sourceMappingURL=style.scss.map */
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+.container {
+  width: 1000px;
+  margin: auto;
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 10px; }
+
+.container1 {
+  width: 1000px;
+  margin: auto;
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 10px; }
+  .container1 #displayRecipe {
+    padding: 10px;
+    border: 1px solid gray;
+    margin: 5px; }
+    .container1 #displayRecipe ul li {
+      text-decoration: none; }
+    .container1 #displayRecipe ul {
+      list-style-type: none; }
+
+.row {
+  display: flex;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 10px; }
+
+.column:nth-of-type(1) {
+  flex: 30%; }
+  .column:nth-of-type(1) #logo {
+    border: 2px solid black;
+    border-radius: 100%;
+    width: 25%;
+    margin: auto; }
+
+.column:nth-of-type(2) {
+  flex: 70%; }
+  .column:nth-of-type(2) h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 70px; }
+
+form p {
+  margin-bottom: 8px; }
+form label {
+  font-family: 'Courier New', Courier, monospace;
+  display: block;
+  margin-bottom: 17px; }
+form .formRow {
+  display: flex; }
+form .formColumn1 {
+  flex: 30%; }
+form .formColumn2 {
+  flex: 70%; }
+form #recipeName, form #servingSize, form #cookTime, form #difficulty, form #prepTime, form .ingrediants, form .instructions {
+  width: 50%;
+  border-radius: 10px;
+  height: 25px;
+  margin-bottom: 10px; }
+form #addIngrediants, form #addInstructions {
+  margin-left: 10px; }
+form #addIngrediant, form #addInstruction {
+  display: inline; }
+form span {
+  font-weight: bold;
+  color: red; }
+
+/*# sourceMappingURL=style.css.map */

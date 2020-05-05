@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="recipe.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="scss/style.scss" rel="stylesheet" type="text/scss">
+    <title>Recipe Input Form</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="column">
+                <img src="images/logo.jpg" alt="logo" name="logo" id="logo">
+            </div>
+            
+            <div class="column">
+                <h1>Ryan's Recipes</h1>
+            </div>
+        </div>
+
+        <form method="POST" action="" id="form" enctype="multipart/form-data">
+            <div class="formRow">
+                <div class="formColumn1">
+                    <label for="recipeName">Recipe Name:</label>
+                    <label for="servingSize">Recipe Serving Size:</label>
+                    <label for="image">Upload Image:</label>
+                    <label for="prepTime">Preperation Time:</label>
+                    <label for="cookTime">Preperation Time:</label>
+                    <label for="difficulty">Select Difficulty:</label>
+                    <label for="amount">Enter Amount:</label>
+                    <label for="instructions">Enter Instructions:</label>
+
+                </div>
+
+                <div class="formColumn2">
+                    <input type="text" id="recipeName" name="recipeName" placeholder=" Enter Recipe Name"><span id="nameErrMsg"></span>
+                    <input type="text" id="servingSize" name="servingSize" placeholder=" Enter Serving Size"><span id="SSErrMsg"></span>
+                    <p><input type="file" name="image" id="image"></p>
+                    <input type="text" id="prepTime" name="prepTime" placeholder=" Enter Number">
+                    <select id="prepLength">
+                        <option value="default">Select One</option>
+                        <option value="hour(s)">Hour(s)</option>
+                        <option value="minute(s)">Minute(s)</option>
+                    </select><span id="prepTimeErrMsg"></span>
+                    <input type="text" id="cookTime" name="cookTime" placeholder=" Enter Cook Time">
+                    <select id="cookLength">
+                        <option value="default">Select One</option>
+                        <option value="hour(s)">Hour(s)</option>
+                        <option value="minute(s)">Minute(s)</option>
+                    </select><span id="cookTimeErrMsg"></span>
+
+                    <div> 
+                        <select id="difficulty">
+                            <option value="default">Choose an option</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="expert">Expert</option>
+                        </select><span id="difficultyErrMsg"></span>
+                    </div>
+                    
+                    <div id="addIngrediant">
+                        <input type="text" class="amount" name="amount" placeholder=" Enter Amount: ">
+                        <input type="text" name="unit of measure" class="measure" placeholder="Unit of Measure: ">
+                        <input type="text" name="ingrediant" class="ingrediant" placeholder="Ingediant: ">
+                    </div><span id="ingrediantsErrMsg"></span><input type="button" id="addIngrediants" value="Add Ingrediants"></select>
+
+                    <div id="addInstruction">
+                        <input type="text" class="instructions" name="instructions" placeholder=" Enter Instructions">
+                    </div><span id="instructionErrMsg"></span><input type="button" id="addInstructions" value="Add Instruction">
+
+
+                </div>
+
+            </div>
+  
+            <div id="submitForm">
+                <input type="submit" value="Add Recipe" id="submit" name="submit">
+                <input type="reset" value="Reset" id="reset">
+            </div>
+
+        </form>
+    </div>
+
+    <div class="container1">
+        <h1>Display Recipes:</h1>
+        <p id="recipeOutput"></p>
+    </div>
+
+</body>
+</html>
